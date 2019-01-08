@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+/* @import url('https://fonts.googleapis.com/css?family=Prosto+One'); */
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-size: 1rem;
+   font-family: 'Audiowide', cursive;
+   /* font-family: 'Prosto One', cursive; */
+   background-color: rgb(19, 132, 155);
+   color: rgb(219, 223, 209);
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.container {
+   display: flex;
+   width: 80%;
+   justify-content: center;
+   align-items: center;
+   margin-top: 2rem;
+}
+
+.board {
+   margin: 2rem;
+   display: flex;
+   width: 30%;
+   flex-wrap: wrap;
+}
+
+.card {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 5px;
+   width: calc(33% - 12px);
+   font-size: 4rem;
+   cursor: pointer;
+   transform: scale(1);
+   transition: transform 0.2s;
+   box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.75);
+}
+
+.card:active {
+   transform: scale(0.95);
+}
+
+.fa {
+   font-size: 3rem;
+   padding: 10px;
+}
+
+.clicked {
+   color: rgb(19, 132, 155);
+   background-color: rgb(219, 223, 209);
+}
+
+.info {
+   margin: 10px;
+   width: 30%;
+   font-size: 1.5rem;
+   text-align: center;
+}
+
+.correct {
+   color: greenyellow;
+}
+
+.negative {
+   color: red;
+}
+
+footer {
+   padding-top: 4rem;
+}
+
+footer a {
+   text-decoration: none;
+   color: rgb(219, 223, 209);
+}
+
+@media (max-width: 1100px) {
+   .container {
+      width: 80%;
+      justify-content: center;
+   }
+
+   .board .info {
+      width: 60%;
+      margin: 1.5rem;
+   }
+
+   .card {
+      width: calc(35% - 12px);
+      margin: 2px;
+   }
+
+   .fa {
+      font-size: 2rem;
+   }
+
+   h2 {
+      font-size: 1rem;
+   }
+
+   .info {
+      font-size: 1.2rem;
+   }
+}
+
+@media (max-width: 800px) {
+   .fa {
+      font-size: 1.5rem;
+   }
+
+   .container {
+      width: 100%;
+   }
+
+   .board {
+      width: 90%;
+      margin: 1rem;
+   }
+}
+
+@media (max-width: 600px) {
+   h2 {
+      display: none;
+   }
+
+   .fa {
+      font-size: 1.2rem;
+   }
+
+   .container {
+      margin-top: 1rem;
+   }
+
+   .board {
+      width: 90%;
+      margin: 0.2rem;
+   }
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+   .container {
+      flex-direction: column;
+   }
+
+   .board,
+   .info {
+      width: 80%;
+      margin: 1.5rem;
+   }
+}
