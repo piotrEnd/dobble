@@ -11,7 +11,7 @@ body {
    font-size: 1rem;
    font-family: 'Audiowide', cursive;
    /* font-family: 'Prosto One', cursive; */
-   background-color: rgb(19, 132, 155);
+   background: linear-gradient(rgb(52, 166, 189), rgb(19, 132, 155));
    color: rgb(219, 223, 209);
    min-height: 100vh;
    display: flex;
@@ -33,6 +33,7 @@ body {
    display: flex;
    width: 30%;
    flex-wrap: wrap;
+   filter: opacity(0.95);
 }
 
 .card {
@@ -45,7 +46,10 @@ body {
    cursor: pointer;
    transform: scale(1);
    transition: transform 0.2s;
+   border-radius: 5px;
    box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.75);
+   color: rgb(19, 132, 155);
+   background-color: rgb(219, 223, 209);
 }
 
 .card:active {
@@ -58,8 +62,8 @@ body {
 }
 
 .clicked {
-   color: rgb(19, 132, 155);
-   background-color: rgb(219, 223, 209);
+   color: rgb(219, 223, 209);
+   background-color: rgb(19, 132, 155);
 }
 
 .info {
@@ -71,10 +75,12 @@ body {
 
 .correct {
    color: greenyellow;
+   font-weight: bold;
 }
 
 .negative {
    color: red;
+   font-weight: bold;
 }
 
 footer {
@@ -88,26 +94,16 @@ footer a {
 
 @media (max-width: 1100px) {
    .container {
-      width: 80%;
-      justify-content: center;
+      width: 100%;
    }
 
    .board .info {
-      width: 60%;
-      margin: 1.5rem;
-   }
-
-   .card {
-      width: calc(35% - 12px);
-      margin: 2px;
+      width: 100%;
+      margin: 0.8rem;
    }
 
    .fa {
-      font-size: 2rem;
-   }
-
-   h2 {
-      font-size: 1rem;
+      font-size: 2.8rem;
    }
 
    .info {
@@ -115,28 +111,10 @@ footer a {
    }
 }
 
-@media (max-width: 800px) {
-   .fa {
-      font-size: 1.5rem;
-   }
-
-   .container {
-      width: 100%;
-   }
-
-   .board {
-      width: 90%;
-      margin: 1rem;
-   }
-}
-
-@media (max-width: 600px) {
+@media (max-width: 950px) {
    h2 {
-      display: none;
-   }
-
-   .fa {
       font-size: 1.2rem;
+      text-align: center;
    }
 
    .container {
@@ -145,7 +123,30 @@ footer a {
 
    .board {
       width: 90%;
-      margin: 0.2rem;
+   }
+}
+
+@media (max-width: 650px) {
+   h2 {
+      padding: 0 1.5rem;
+   }
+
+   .container {
+      margin-top: 0.2rem;
+   }
+
+   .board {
+      margin: 1rem;
+   }
+
+   footer {
+      padding-top: 2rem;
+   }
+}
+
+@media (max-width: 530px) {
+   .fa {
+      font-size: 1.8rem;
    }
 }
 
