@@ -1,6 +1,7 @@
 /* GLOBAL VARIABLES */
 
 let icons = [
+   // fontawesome icons as unicode
    'f13d;', //anchor
    'f77c;', //baby
    'f1e2;', //bomb
@@ -59,15 +60,13 @@ function generateBoard() {
    mixIt();
 
    for (let i = 0; i < 18; i++) {
+      //populate boards with unicode fontawesome icons
       cards[i].innerHTML = '&#x' + icons[i];
       cards[i].dataset.id = icons[i];
    }
 
    let randomFirstCard = Math.floor(Math.random() * 9);
-   // console.log(randomFirstCard);
-
    let randomSecondCard = Math.floor(Math.random() * 9) + 9;
-   // console.log(randomSecondCard);
 
    cards[randomSecondCard].innerHTML = '&#x' + icons[randomFirstCard];
    cards[randomSecondCard].dataset.id = icons[randomFirstCard];
