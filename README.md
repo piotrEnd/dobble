@@ -1,18 +1,22 @@
 ## dobble
 ----
 
+**Information architecture:**
+
+Dobble is a well-known card game where players aim to spot matching images on two cards. I've revamped it to resemble a kind of arcade game. My adaptation launches instantly and maintains an endless flow of action. Time measurement intensifies the pressure and heightens the intensity. The game is endless and the score may fluctuate between positive and negative.
+
 **Design:**
 
-Dobble is a popular card game in which players try to find an image shown on two cards. I rearranged it to look more like an arcade game. It starts immediately, time measurement causes additional pressure and it never stops. Typograhy corresponds to game machines, icons provide retro touch in opposite to  background signaling rather modern tone.
-
+The typography echoes the classic look of arcade machines. Retro icons also introduce a nostalgic touch. This vintage charm contrasts with a modern-toned background.
 
 Please >> [visit here](https://piotrend.github.io/dobble/ ) <<
-
-> *Januar, 2019*
 
 
 | technology stack  |
 | --- 		       |
+| --- 		       |
 | HTML |
 | CSS |
 | vanilla js |
+
+> *Januar, 2019*
